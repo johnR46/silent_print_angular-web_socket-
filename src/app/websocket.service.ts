@@ -7,9 +7,7 @@ export const WS_ENDPOINT = "ws://127.0.0.1:12212/printer";
 })
 export class WebsocketService {
   subject = webSocket(WS_ENDPOINT);
-
   constructor() {}
-
   printPDF(vale: string): void {
     this.subject.next({
       type: "INVOICE",
